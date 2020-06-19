@@ -10,8 +10,9 @@ body {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 60px;
+  height: 70px;
   position: fixed;
   z-index: 20;
   background-color: rgba(54, 36, 27, .8)
@@ -31,7 +32,9 @@ body {
   text-decoration: none;
   font-size: 20px;
   color: white;
+  text-transform: uppercase;
 }
+
 
 
 .hero{
@@ -63,13 +66,20 @@ body {
 }
 
 
+
 .about-section{
-  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0 20%;
+  max-width: 1800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.content-about{
+  box-sizing: border-box;
+  padding: 5% 10%;
 }
 
 .content-about:before{
@@ -79,18 +89,22 @@ body {
   bottom: -25px;
 }
 
-.about-section-id{
-  padding-top: 15px;
-}
-
-.about-section-description{
-  font-size: 30px;
+.content-about-description{
+  font-size: 25px;
+  line-height: 1.6;
 }
 
 .content-about h3{
   font-family: 'Stalemate', cursive;
   font-size: 70px;
   margin: 0;
+}
+
+.section-id{
+  padding-top: 15px;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #AE7954;
 }
 
 
@@ -112,4 +126,56 @@ body {
   font-size: 70px;
   margin: 0;
   color: white;
+}
+
+
+
+.menu-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 1800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.content-menu{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5% 5%;
+}
+
+.menu-items-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  justify-content: space-around;
+  gap: 20px;
+  padding: 5% 0;
+}
+
+.img-item-container{
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.img-item-container img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.menu-button{
+  padding: 10px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  background-color: #AE7954;
+}
+
+
+
+.contact-section{
+  border: 1px solid black;
 }
