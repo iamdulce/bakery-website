@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;700&family=Stalemate&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/font/flaticon.css">
   <link rel="stylesheet" href="css/styles.css">
   <title>Panland</title>
 </head>
@@ -29,16 +30,16 @@
 
   <main>
     <section class="hero">
-      <div class="content-hero">
+      <div class="hero-container">
         <h1>Panland</h1>
         <p>Like freshly baked magic</p>
       </div>
     </section>
 
     <section class="about-section">
-      <div class="content-about">
-        <p class="section-id content-about-id">About us</p>
-        <h3>Welcome to our crumbie kingdom</h3>
+      <div class="about-container">
+        <h3 class="section-id">About us</h3>
+        <p class="content-about-subtitle">Welcome to our crumbie kingdom</p>
         <p class="content-about-description">We truly believe that bake is like magic. We love how happy a person can be with just smelling fresh baked bread. And of course for us, working with dough, be able too see it grows on the oven and make people a little bit happier is like living in an authentic magical charm.</p>
       </div>
     </section>
@@ -48,8 +49,8 @@
     </div>
 
     <section class="menu-section">
-      <div class="content-menu">
-        <p class="section-id content-menu-id">Menu</p>
+      <div class="menu-container">
+        <h3 class="section-id">Menu</h3>
         <div class="menu-items-container">
           <figure class="img-item-container">
             <img src="images/menu-item-1.jpg" alt="">
@@ -70,37 +71,41 @@
     </section>
 
     <section class="contact-section">
-      <div>
-        <h3>Contact us</h3>
-        <p>info@panland.com / tel: 123-456-789</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam id voluptatibus accusantium, qui cumque quae.</p>
-      </div>
-    
-      <div class="form">
-        <form action="">
-          <label for="name">Name</label>
-          <input type="text" placeholder="Name" id="name">
-          <label for="email">Email</label>
-          <input type="text" placeholder="Email" id="email">
-          <label for="phone">Phone</label>
-          <input type="text" placeholder="Phone" id="phone">
-          <label for="message">Enter your message</label>
-          <input type="text" placeholder="Message" id="message">
-          <input type="submit" name="submit" value="Submit">
-        </form>
-      </div>
-      
-      <div>
-        <p>Come say hi!</p>
-        <p>Mon - Fri: 8am - 8pm</p>
-        <p>Saturday: 9am - 7pm</p>
-        <p>Sunday: 9am - 7pm</p>
+      <div class="contact-container">
+        <div class="contact-description">
+          <h3 class="section-id">Contact us</h3>
+          <p>Would you like to ask for something specific? Have any doubt? Leave us a message, we'll be glad to answer!</p>
+        </div>
+
+        <div class="contact-form">
+          <form action="" class="form-content">
+            <label for="name">Name</label>
+            <input type="text" placeholder="Name" id="name">
+            <label for="email">Email</label>
+            <input type="text" placeholder="Email" id="email">
+            <label for="message">Enter your message</label>
+            <textarea placeholder="Message" style="height:100px" id="message"></textarea>
+            <input type="submit" name="submit" value="Submit">
+          </form>
+        </div>   
+        
+        <div class="contact-media">
+          <div class="social-media-icons">
+            <a href="">
+              <span class="flaticon-001-facebook"></span>
+            </a>
+            <a href="">
+              <span class="flaticon-011-instagram"></span>
+            </a>
+          </div>
+          <p>info@panland.com / tel: 123-456-789</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>Made with 💟 by @iamdulce_</p>
+    <p>Made with 💕  by @iamdulce_</p>
   </footer>
   
 </body>
