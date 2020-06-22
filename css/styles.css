@@ -446,4 +446,23 @@ footer{
   .nav-bar-options li a {
     font-size: 20px;
   }
+
+
+  @media screen and (max-width: 320px){
+    .hero-container h1{
+      font-size: 70px;
+    }
+  
+    .hero-container p, .section-motto p{
+      font-size: 38px;
+    }
+
+    .content-about-subtitle{
+      font-size: 34px;
+    }
+
+    .content-about-description{
+      font-size: 14px;
+    }
+  }
 }
