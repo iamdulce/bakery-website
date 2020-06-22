@@ -5,25 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;700&family=Stalemate&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
   <link rel="stylesheet" href="css/font/flaticon.css">
   <link rel="stylesheet" href="css/styles.css">
   <title>Panland</title>
 </head>
 <body>
 
-  <nav class="nav-bar">
+  <i class="icon-menu burger-button" id="burger-menu"></i>
+
+  <nav class="nav-bar is-active">
     <ul class="nav-bar-options">
       <li>
-        <a href="">Home</a>
+        <a href="index.html">Home</a>
       </li>
       <li>
-        <a href="">About us</a>
+        <a href="#about_us">About us</a>
       </li>
       <li>
-        <a href="">Menu</a>
+        <a href="#our_products">Our products</a>
       </li>
       <li>
-        <a href="">Contact</a>
+        <a href="#contact">Contact</a>
       </li>
     </ul>
   </nav>
@@ -36,7 +40,7 @@
       </div>
     </section>
 
-    <section class="about-section">
+    <section class="about-section" id="about_us">
       <div class="about-container">
         <h3 class="section-id">About us</h3>
         <p class="content-about-subtitle">Welcome to our crumbie kingdom</p>
@@ -44,33 +48,53 @@
       </div>
     </section>
 
-    <div class="section-separator">
+    <div class="section-motto">
       <p>Baking the world a better place</p>
     </div>
 
-    <section class="menu-section">
-      <div class="menu-container">
-        <h3 class="section-id">Menu</h3>
-        <div class="menu-items-container">
-          <figure class="img-item-container">
-            <img src="images/menu-item-1.jpg" alt="">
-          </figure>
-          <figure class="img-item-container">
-            <img src="images/menu-item-2.jpg" alt="">
-          </figure>
-          <figure class="img-item-container">
-            <img src="images/menu-item-3.jpg" alt="">
-          </figure>
+    <section class="products-section" id="our_products">
+      <div class="products-container">
+        <h3 class="section-id">Our Products</h3>
+        
+        <div class="products-items-container">
+          <div class="img-item-container">
+            <figure class="img-container">
+              <img src="images/menu-item-1.jpg" alt="">
+            </figure>
+            <div class="img-description">
+              <p>Sweet breads</p>
+            </div>
+          </div>
+          
+          <div class="img-item-container">
+            <figure class="img-container">
+              <img src="images/menu-item-2.jpg" alt="">
+            </figure>
+            <div class="img-description">
+              <p>Holiday breads</p>
+            </div>
+          </div>
+        
+          <div class="img-item-container">
+            <figure class="img-container">
+              <img src="images/menu-item-3.jpg" alt="">
+            </figure>
+            <div class="img-description">
+              <p>Mini bites</p>
+            </div>
+          </div>
         </div>
+
         <div class="button-container">
-          <a href="" role="button" class="menu-button">
+          <a href="" role="button" class="products-button">
             See more...
           </a>
         </div>
       </div>
+      </div>
     </section>
 
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
       <div class="contact-container">
         <div class="contact-description">
           <h3 class="section-id">Contact us</h3>
@@ -108,5 +132,24 @@
     <p>Made with 💕  by @iamdulce_</p>
   </footer>
   
+  <script>
+    const mobile = window.matchMedia("screen and (max-width: 540px)");
+    const navBar = document.querySelector(".nav-bar"); 
+    const burgerButton = document.querySelector("#burger-menu");
+
+    mobile.addListener(validation)
+
+    function validation(event){
+      if (event.matches) {
+        burgerButton.addEventListener("click", showHide)
+        } else{          burgerButton.removeEventListener("click", showHide)
+        }
+      }
+    validation(mobile);
+
+    function showHide(){
+      navBar.classList.toggle("is-active");
+     }
+  </script>
 </body>
 </html>
