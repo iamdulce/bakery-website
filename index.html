@@ -135,6 +135,7 @@
   <script>
     const mobile = window.matchMedia("screen and (max-width: 540px)");
     const navBar = document.querySelector(".nav-bar"); 
+    const navigationsItems = document.querySelectorAll(".nav-bar a");
     const burgerButton = document.querySelector("#burger-menu");
 
     mobile.addListener(validation)
@@ -146,6 +147,10 @@
         }
       }
     validation(mobile);
+
+    navigationItems.forEach(i => i.addEventListener('click', function() {
+    navBar.classList.remove("is-active");
+    }));
 
     function showHide(){
       navBar.classList.toggle("is-active");
